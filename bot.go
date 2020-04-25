@@ -83,6 +83,6 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 
         token := GenerateToken()
 
-        s.ChannelMessageSend(m.ChannelID, tokenMessages[i] + "\n\n" + token)
+        s.ChannelMessageSend(m.ChannelID, tokenMessages[i] + "\n\n`" + token + "`")
     }
 }
