@@ -53,7 +53,6 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
     }
 
     if strings.Contains(strings.ToLower(m.Content), "token") {
-        fmt.Println("Sending a token")
         tokenMessages := []string{
             "Did someone say token? I got one!",
             "A token is on it's way!",
@@ -83,6 +82,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 
         token := GenerateToken()
 
+        fmt.Println("Sending a token: " + token)
         s.ChannelMessageSend(m.ChannelID, tokenMessages[i] + "\n\n`" + token + "`")
     }
 }
