@@ -73,7 +73,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
             "Does discord compile?\n// Hmm, I guess not",
             "Does discord compile?\n# Hmm, I guess not",
             "Can't you just generate your own token?",
-            "How many bits does it take to get to the center of discord bot?\n\n||These tokens have 512 bits, but my token has fewer.||",
+            "How many bits does it take to get to the center of discord bot?\n\n||It's 512.||",
             "加密安全令牌，現在為中文", // Cryptographically secure tokens, now in Chinese!
 
         }
