@@ -51,8 +51,8 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
     if m.Author.ID == s.State.User.ID {
         return
     }
-
-    if strings.Contains(strings.ToLower(m.Content), "token") {
+    finalStr := strings.Replace(m.Content, " ", "", -1)
+    if strings.Contains(strings.ToLower(finalStr), "token") {
         tokenMessages := []string{
             "Did someone say token? I got one!",
             "A token is on it's way!",
